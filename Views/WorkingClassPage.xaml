@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Hegemony.Views.WorkingClassPage"
+             xmlns:controls="clr-namespace:Microsoft.Maui.Controls;assembly=Microsoft.Maui.Controls"
+             Title="Working Class"
+             xmlns:models="clr-namespace:Hegemony.Models">
+
+
+    <ContentPage.BindingContext>
+        <models:WorkingClassModel/>
+    </ContentPage.BindingContext>
+
+
+    <Grid ColumnDefinitions="*" RowDefinitions="auto,auto,auto,*,*,*" RowSpacing="0">
+        <Label Text="Select Population" TextColor="White" HorizontalTextAlignment="Center" FontSize="18" Padding="10"/>
+        <StackLayout Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="5">
+                <Button Clicked="C3" Text="3" TextColor="Black" BackgroundColor="{Binding MyBackgroundColor}" HeightRequest="50" WidthRequest="50"/>
+                <Button Clicked="C4" Text="4" TextColor="Black" BackgroundColor="{Binding MyBackgroundColor}" HeightRequest="50" WidthRequest="50"/>
+                <Button Clicked="C5" Text="5" TextColor="Black" BackgroundColor="{Binding MyBackgroundColor}" HeightRequest="50" WidthRequest="50"/>
+                <Button Clicked="C6" Text="6" TextColor="Black" BackgroundColor="{Binding MyBackgroundColor}" HeightRequest="50" WidthRequest="50"/>
+            </StackLayout>
+        </StackLayout>
+        <StackLayout Grid.Row="2" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Padding="5">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="5">
+            <Button Clicked="C7" Text="7" TextColor="Black" BackgroundColor="{Binding MyBackgroundColor}" HeightRequest="50" WidthRequest="50"/>
+            <Button Clicked="C8" Text="8" TextColor="Black" BackgroundColor="{Binding MyBackgroundColor}" HeightRequest="50" WidthRequest="50"/>
+            <Button Clicked="C9" Text="9" TextColor="Black" BackgroundColor="{Binding MyBackgroundColor}" HeightRequest="50" WidthRequest="50"/>
+            <Button Clicked="C10" Text="10" TextColor="Black" BackgroundColor="{Binding MyBackgroundColor}" HeightRequest="50" WidthRequest="50"/>
+        </StackLayout>
+        </StackLayout>
+        <StackLayout Grid.Row="3" VerticalOptions="Start" Padding="10">
+            <Label Text="Income Tax:" HorizontalTextAlignment="Center" FontSize="18"/>
+            <Label x:Name="DisplayIncomeTax" Text="" HorizontalTextAlignment="Center" FontSize="18"/>
+        </StackLayout>
+
+    </Grid>
+</ContentPage>

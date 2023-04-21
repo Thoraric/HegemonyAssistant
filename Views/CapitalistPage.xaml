@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:Microsoft.Maui.Controls;assembly=Microsoft.Maui.Controls"
+             x:Class="Hegemony.Views.CapitalistPage"
+             Title="Capitalist Class"
+             xmlns:models="clr-namespace:Hegemony.Models">
+
+    <ContentPage.BindingContext>
+        <models:CapitalistModel/>
+    </ContentPage.BindingContext>
+
+
+    <ScrollView>
+        <Grid ColumnDefinitions="*" RowDefinitions="auto,auto,auto,auto,auto,auto,auto" Margin="10">
+            <StackLayout>
+                <Label Text="Select Operational Companies" TextColor="White" HorizontalTextAlignment="Center" FontSize="20"/>
+            </StackLayout>
+            <StackLayout Grid.Row="1" Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="4" Padding="5">
+                    <Button Clicked="C1" Text="1" TextColor="White" BackgroundColor="{Binding MyBackgroundColor}" HeightRequest="50" WidthRequest="50"/>
+                    <Button Clicked="C2" Text="2" TextColor="White" BackgroundColor="{Binding MyBackgroundColor}" HeightRequest="50" WidthRequest="50"/>
+                    <Button Clicked="C3" Text="3" TextColor="White" BackgroundColor="{Binding MyBackgroundColor}" HeightRequest="50" WidthRequest="50"/>
+                    <Button Clicked="C4" Text="4" TextColor="White" BackgroundColor="{Binding MyBackgroundColor}" HeightRequest="50" WidthRequest="50"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="4">
+                    <Button Clicked="C5" Text="5" TextColor="White" BackgroundColor="{Binding MyBackgroundColor}" HeightRequest="50" WidthRequest="50"/>
+                    <Button Clicked="C6" Text="6" TextColor="White" BackgroundColor="{Binding MyBackgroundColor}" HeightRequest="50" WidthRequest="50"/>
+                    <Button Clicked="C7" Text="7" TextColor="White" BackgroundColor="{Binding MyBackgroundColor}" HeightRequest="50" WidthRequest="50"/>
+                    <Button Clicked="C8" Text="8" TextColor="White" BackgroundColor="{Binding MyBackgroundColor}" HeightRequest="50" WidthRequest="50"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="4" Padding="5">
+                    <Button Clicked="C9" Text="9" TextColor="White" BackgroundColor="{Binding MyBackgroundColor}" HeightRequest="50" WidthRequest="50"/>
+                    <Button Clicked="C10" Text="10" TextColor="White" BackgroundColor="{Binding MyBackgroundColor}" HeightRequest="50" WidthRequest="50"/>
+                    <Button Clicked="C11" Text="11" TextColor="White" BackgroundColor="{Binding MyBackgroundColor}" HeightRequest="50" WidthRequest="50"/>
+                    <Button Clicked="C12" Text="12" TextColor="White" BackgroundColor="{Binding MyBackgroundColor}" HeightRequest="50" WidthRequest="50"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Grid.Row="2">
+                <Label Text="Employment Tax:" HorizontalTextAlignment="Center" FontSize="20"/>
+                <Label x:Name="DisplayEmploymentTax" Text="0" HorizontalTextAlignment="Center" FontSize="20"/>
+                <Label Text="Type Revenue" HorizontalTextAlignment="Center" FontSize="20" Padding="5"/>
+                <Label x:Name="result" FontSize="30" Text="0" TextColor="Black" HorizontalTextAlignment="Center" WidthRequest="150" BackgroundColor="White"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="5" Padding="5">
+                    <Button Text="1" Clicked="OnNumberSelection" TextColor="White" BackgroundColor="{Binding MyBackgroundColor}" HeightRequest="50" WidthRequest="50"/>
+                    <Button Text="2" Clicked="OnNumberSelection" TextColor="White" BackgroundColor="{Binding MyBackgroundColor}" HeightRequest="50" WidthRequest="50"/>
+                    <Button Text="3" Clicked="OnNumberSelection" TextColor="White" BackgroundColor="{Binding MyBackgroundColor}" HeightRequest="50" WidthRequest="50"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="5">
+                    <Button Text="4" Clicked="OnNumberSelection" TextColor="White" BackgroundColor="{Binding MyBackgroundColor}" HeightRequest="50" WidthRequest="50"/>
+                    <Button Text="5" Clicked="OnNumberSelection" TextColor="White" BackgroundColor="{Binding MyBackgroundColor}" HeightRequest="50" WidthRequest="50"/>
+                    <Button Text="6" Clicked="OnNumberSelection" TextColor="White" BackgroundColor="{Binding MyBackgroundColor}" HeightRequest="50" WidthRequest="50"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="5" Padding="5">
+                    <Button Text="7" Clicked="OnNumberSelection" TextColor="White" BackgroundColor="{Binding MyBackgroundColor}" HeightRequest="50" WidthRequest="50"/>
+                    <Button Text="8" Clicked="OnNumberSelection" TextColor="White" BackgroundColor="{Binding MyBackgroundColor}" HeightRequest="50" WidthRequest="50"/>
+                    <Button Text="9" Clicked="OnNumberSelection" TextColor="White" BackgroundColor="{Binding MyBackgroundColor}" HeightRequest="50" WidthRequest="50"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="5">
+                    <Button Text="DEL" FontSize="11" Clicked="OnDelete" TextColor="White" BackgroundColor="{Binding MyBackgroundColor}" HeightRequest="50" WidthRequest="50"/>
+                    <Button Text="0"  Clicked="OnNumberSelection" TextColor="White" BackgroundColor="{Binding MyBackgroundColor}" HeightRequest="50" WidthRequest="50"/>
+                    <Button Text="C"  Clicked="OnClear" TextColor="White" BackgroundColor="{Binding MyBackgroundColor}" HeightRequest="50" WidthRequest="50"/>
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="Revenue Tax:" TextColor="White" FontSize="20" VerticalOptions="Center" HorizontalTextAlignment="Center" Padding="5"></Label>
+                    <Label x:Name="displayRevenue" Text="0" TextColor="White" FontSize="20" VerticalOptions="Center" HorizontalTextAlignment="Center"></Label>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Grid.Row="4" Margin="0,0,0,0">
+                <CollectionView x:Name="collectionView" ItemsSource="{Binding Companies}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <StackLayout  Grid.Column="0" Orientation="Horizontal"  VerticalOptions="Start">
+                                        <Image Source="{Binding prodImage}" Aspect="AspectFit" WidthRequest="16" HeightRequest="16" VerticalOptions="Center" HorizontalOptions="Center" />
+                                        <Label Text="{Binding companyName}" TextColor="White" LineBreakMode="WordWrap" MaximumWidthRequest="160" VerticalOptions="Center" HorizontalOptions="Center"/>
+                                    </StackLayout>
+                                    
+                                    <StackLayout Orientation="Horizontal" Grid.Column="1" HorizontalOptions="EndAndExpand">
+                                        <ImageButton Source="workingclassworker.svg" Clicked="ChangeClass" HeightRequest="40" MinimumHeightRequest="40" WidthRequest="40" MinimumWidthRequest="40" BindingContext="{Binding .}" />
+                                        <ImageButton Source="autooff" Clicked="HasAutoToken" HeightRequest="40" MinimumHeightRequest="40" WidthRequest="40" MinimumWidthRequest="40" BindingContext="{Binding .}" />
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal" Grid.Column="2" HorizontalOptions="EndAndExpand" VerticalOptions="End">
+                                        <RadioButton Content="L3" GroupName="{Binding radioButtonGroupName}"  CheckedChanged="OnRadioButtonCheckedChanged" />
+                                        <RadioButton Content="L2" GroupName="{Binding radioButtonGroupName}"  CheckedChanged="OnRadioButtonCheckedChanged" />
+                                        <RadioButton Content="L1" GroupName="{Binding radioButtonGroupName}"  CheckedChanged="OnRadioButtonCheckedChanged" />
+                                    </StackLayout>
+                                </Grid>
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnRowTapped"/>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+            <StackLayout Grid.Row="5">
+                <StackLayout>
+                    <Label Text="Production" HorizontalOptions="Center" FontSize="20" Padding="10"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center">
+                    <StackLayout>
+                        <Image Source="food.svg" HeightRequest="60"/>
+                        <Label x:Name="DisplayCapitalistFood" FontSize="20" Text="0" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <Image Source="healthcare.svg" HeightRequest="60"/>
+                        <Label x:Name="DisplayCapitalistHealthcare" FontSize="20" Text="0" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <Image Source="education.svg" HeightRequest="60"/>
+                        <Label x:Name="DisplayCapitalistEducation" FontSize="20" Text="0" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <Image Source="luxury.svg" HeightRequest="60"/>
+                        <Label x:Name="DisplayCapitalistLuxury" FontSize="20" Text="0" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <Image Source="influence.svg" HeightRequest="60"/>
+                        <Label x:Name="DisplayCapitalistInfluence" FontSize="20" Text="0" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Grid.Row="6">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Working Class Wage" FontSize="20" Padding="10" LineBreakMode="WordWrap" WidthRequest="180" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    <Label Text="Middle Class Wage" FontSize="20" Padding="10" LineBreakMode="WordWrap" WidthRequest="180" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <StackLayout HorizontalOptions="Center" WidthRequest="180">
+                        <Image Source="money.svg" HeightRequest="60" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        <Label x:Name="DisplayCapitalistWorkingWage" FontSize="20" Text="0" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="Center" WidthRequest="180">
+                        <Image Source="money.svg" HeightRequest="60" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        <Label x:Name="DisplayCapitalistMiddleWage" FontSize="20" Text="0" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>

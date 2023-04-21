@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Hegemony.Views.MainPage"
+             xmlns:models="clr-namespace:Hegemony.Models">
+
+    <Grid RowDefinitions="auto,auto,auto,auto,auto,auto" Margin="10">
+        <FlexLayout Grid.Row="0" Direction="Row" HeightRequest="76" MaximumHeightRequest="76" HorizontalOptions="Center">
+            <ImageButton x:Name="P1A" Source="policy1a.svg"/>
+            <ImageButton x:Name="P1B" Source="policy1b.svg"/>
+            <ImageButton x:Name="P1C" Source="policy1c.svg"/>
+        </FlexLayout>
+        <FlexLayout Grid.Row="1" Direction="Row" HeightRequest="76">
+            <ImageButton x:Name="P2A" Source="policy2a.svg" Clicked="P2AClicked"/>
+            <ImageButton x:Name="P2B" Clicked="P2BClicked" Source="policy2b.svg"/>
+            <ImageButton x:Name="P2C" Clicked="P2CClicked" Source="policy2c.svg"/>
+        </FlexLayout>
+        <FlexLayout Grid.Row="2" Direction="Row" HeightRequest="76">
+            <ImageButton x:Name="P3A" Source="policy3a.svg" Clicked="P3AClicked"/>
+            <ImageButton x:Name="P3B" Clicked="P3BClicked" Source="policy3b.svg"/>
+            <ImageButton x:Name="P3C" Clicked="P3CClicked" Source="policy3c.svg"/>
+        </FlexLayout>
+        <FlexLayout Grid.Row="3" Direction="Row" HeightRequest="76">
+            <ImageButton x:Name="P4A" Source="policy4a.svg" Clicked="P4AClicked"/>
+            <ImageButton x:Name="P4B" Clicked="P4BClicked" Source="policy4b.svg"/>
+            <ImageButton x:Name="P4C" Clicked="P4CClicked" Source="policy4c.svg"/>
+        </FlexLayout>
+        <FlexLayout Grid.Row="4" Direction="Row" HeightRequest="76">
+            <ImageButton x:Name="P5A" Source="policy5a.svg" Clicked="P5AClicked"/>
+            <ImageButton x:Name="P5B" Clicked="P5BClicked" Source="policy5b.svg"/>
+            <ImageButton x:Name="P5C" Clicked="P5CClicked" Source="policy5c.svg"/>
+        </FlexLayout>
+        <VerticalStackLayout Grid.Row="5" Padding="10">
+            <Label Text="Tax Multiplier: " TextColor="White" FontSize="20" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+            <Label x:Name="displayTaxMultiplier" Text="" TextColor="White" FontSize="20" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Hegemony.Views.StateClassPage"
+             xmlns:controls="clr-namespace:Microsoft.Maui.Controls;assembly=Microsoft.Maui.Controls"
+             xmlns:models="clr-namespace:Hegemony.Models">
+
+    <ContentPage.BindingContext>
+        <models:StateCompany/>
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <Grid ColumnDefinitions="*" RowDefinitions="auto,auto,auto,auto" Margin="10">
+            <StackLayout Grid.Row="1" VerticalOptions="FillAndExpand" Margin="0,0,0,0">
+                <CollectionView x:Name="collectionView" ItemsSource="{Binding Companies}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <StackLayout  Grid.Column="0" Orientation="Horizontal"  VerticalOptions="Start">
+                                        <Image Source="{Binding prodImage}" Aspect="AspectFit" WidthRequest="16" HeightRequest="16" VerticalOptions="Center" HorizontalOptions="Center" />
+                                        <Label Text="{Binding companyName}" TextColor="White" LineBreakMode="WordWrap" MaximumWidthRequest="200" VerticalOptions="Center" HorizontalOptions="Center"/>
+                                    </StackLayout>
+                                    
+                                    <StackLayout Orientation="Horizontal" Grid.Column="1" HorizontalOptions="EndAndExpand" >
+                                        <ImageButton x:Name="ChangeClass" Source="workingclassworker.svg" Clicked="ChangeClass" HeightRequest="40" MinimumHeightRequest="40" WidthRequest="40" MinimumWidthRequest="40" BindingContext="{Binding .}" />
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal" Grid.Column="2" HorizontalOptions="EndAndExpand" VerticalOptions="End">
+                                        <RadioButton Content="L3" GroupName="{Binding radioButtonGroupName}" CheckedChanged="OnRadioButtonCheckedChanged" />
+                                        <RadioButton Content="L2" GroupName="{Binding radioButtonGroupName}" CheckedChanged="OnRadioButtonCheckedChanged" />
+                                        <RadioButton Content="L1" GroupName="{Binding radioButtonGroupName}" CheckedChanged="OnRadioButtonCheckedChanged" />
+                                    </StackLayout>
+                                </Grid>
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnRowTapped"/>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+
+            <StackLayout Grid.Row="2">
+                <StackLayout>
+                    <Label Text="Production" HorizontalOptions="Center" FontSize="20" Padding="10"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center">
+
+                    <StackLayout>
+                        <Image Source="food.svg" HeightRequest="60"/>
+                        <Label x:Name="DisplayStateFood" FontSize="20" Text="0" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <Image Source="healthcare.svg" HeightRequest="60"/>
+                        <Label x:Name="DisplayStateHealthcare" FontSize="20" Text="0" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <Image Source="education.svg" HeightRequest="60"/>
+                        <Label x:Name="DisplayStateEducation" FontSize="20" Text="0" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <Image Source="luxury.svg" HeightRequest="60"/>
+                        <Label x:Name="DisplayStateLuxury" FontSize="20" Text="0" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <Image Source="influence.svg" HeightRequest="60"/>
+                        <Label x:Name="DisplayStateInfluence" FontSize="20" Text="0" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Grid.Row="3">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Working Class Wage" FontSize="20" Padding="10" LineBreakMode="WordWrap" WidthRequest="180" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    <Label Text="Middle Class Wage" FontSize="20" Padding="10" LineBreakMode="WordWrap" WidthRequest="180" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <StackLayout HorizontalOptions="Center" WidthRequest="180">
+                        <Image Source="money.svg" HeightRequest="60" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        <Label x:Name="DisplayStateWorkingWage" FontSize="20" Text="0" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="Center" WidthRequest="180">
+                        <Image Source="money.svg" HeightRequest="60" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        <Label x:Name="DisplayStateMiddleWage" FontSize="20" Text="0" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>
