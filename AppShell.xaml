@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Hegemony.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:Hegemony.Views"
+    Shell.FlyoutBehavior="Disabled">
+
+    <TabBar>
+        
+        <ShellContent
+            Title="Policies"
+            ContentTemplate="{DataTemplate views:MainPage}"
+            Icon="{OnPlatform 'taxmultiplier.svg', iOS='icon_notes_ios.png', MacCatalyst='icon_notes_ios.png'}" />
+        
+        <ShellContent
+            Title="State"
+            ContentTemplate="{DataTemplate views:StateClassPage}"
+            Icon="{OnPlatform 'state.svg', iOS='icon_notes_ios.png', MacCatalyst='icon_notes_ios.png'}" />
+        
+        <ShellContent
+            Title="Capitalist"
+            ContentTemplate="{DataTemplate views:CapitalistPage}"
+            Icon="{OnPlatform 'capitalist.svg', iOS='icon_about_ios.png', MacCatalyst='icon_about_ios.png'}" />
+
+        <ShellContent
+            Title="Middle"
+            ContentTemplate="{DataTemplate views:MiddleClassPage}"
+            Icon="{OnPlatform 'middleclass.svg', iOS='icon_about_ios.png', MacCatalyst='icon_about_ios.png'}" />
+
+        <ShellContent
+            Title="Working"
+            ContentTemplate="{DataTemplate views:WorkingClassPage}"
+            Icon="{OnPlatform 'WorkingClass.svg', iOS='workingclass.png', MacCatalyst='workingclass.png'}" />
+    </TabBar>
+
+</Shell>
