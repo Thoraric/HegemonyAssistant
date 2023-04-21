@@ -32,4 +32,4 @@ Important Note: Taxation related steps are on top of the screen. This design cho
 3. Scroll down, until you see a list of companies and select the operational companies by tapping on the row. After the tap, it will turn to "Green" to indicate it is selected. You can also unselect it. You have the option to select wheter a working class worker or a middle class worker is working at the company. It will divide the wages accordingly. On capitalist tab you can also select if your company have automation token. On the middle class tab you can specify if your company has the optional working class worker or not. You can see the production and wages at the bottom of the screen. The wages will be counted only if you have one of the wage levels selected by the radio buttons. 
 
 ## Special thanks
-I thank to the entire team of Hegemony for this amazing game. I thank to Réka Forgó and Hella Horváth for the SVG-s.
+I thank to the entire team of Hegemony for this amazing game. I thank to Réka Forgó https://www.instagram.com/rekaforgo/ and Hella Horváth https://www.instagram.com/h_helladesign/ for the SVG-s.
