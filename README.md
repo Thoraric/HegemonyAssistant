@@ -17,7 +17,7 @@ This app was designed to do mathematical operations in the "Produces Goods & Ser
 <div style="display:flex;">
   <img src="https://user-images.githubusercontent.com/18629250/233638454-988d3a4c-a416-4b13-ae7e-83add0f5bacb.jpg" style="margin-right: 10px;" width="250" height="500">
   <img src="https://user-images.githubusercontent.com/18629250/233638461-fc8187e0-7768-457e-b104-ef4da42685fa.jpg" style="margin-right: 10px;" width="250" height="500">
-  <img src="https://user-images.githubusercontent.com/18629250/233638463-8b5d4c8d-3696-4a57-8e06-f2450a362550.jpg" width="250" height="500">
+  <img src="https://user-images.githubusercontent.com/18629250/233867952-0246156c-be8b-47ac-b47d-bf5145e31964.jpg" width="250" height="500">
 </div>
 
 ## How to use
