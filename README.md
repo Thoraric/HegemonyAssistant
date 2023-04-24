@@ -31,5 +31,19 @@ Important Note: Taxation related steps are on top of the screen. This design cho
 
 3. Scroll down, until you see a list of companies and select the operational companies by tapping on the row. After the tap, it will turn to "Green" to indicate it is selected. You can also unselect it. You have the option to select whether a working class worker or a middle class worker is working at the company. It will divide the wages accordingly. On capitalist tab you can also select if your company have automation token. On the middle class tab you can specify if your company has the optional working class worker or not. You can see the production and wages at the bottom of the screen. The wages will be counted only if you have one of the wage levels selected by the radio buttons. 
 
+## How to install
+The easiest is to open this github page from your android mobile. 
+1. Scroll to the releases and click on it.
+2. Scroll to the Assets and click on the .apk file. It will start to download the app to your phone.
+3. Open the downloaded .apk and confirm to install.
+
+<div style="display:flex;">
+  <img src="https://user-images.githubusercontent.com/18629250/233950356-f7022074-92a9-4676-a29f-c89bd02c9774.jpg" style="margin-right: 10px;" width="250" height="500">
+  <img src="https://user-images.githubusercontent.com/18629250/233950403-30711f21-044a-419d-8223-b9456c4e8373.jpg" style="margin-right: 10px;" width="250" height="500">
+  <img src="https://user-images.githubusercontent.com/18629250/233950422-28b1adae-3364-4d3f-909d-e29292a7db83.jpg" width="250" height="500">
+</div>
+
+
+
 ## Special thanks
 I thank to the entire team of Hegemony for this amazing game. I thank to Réka Forgó https://www.instagram.com/rekaforgo/ and Hella Horváth https://www.instagram.com/h_helladesign/ for the SVG-s.
