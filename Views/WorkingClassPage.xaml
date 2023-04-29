@@ -12,7 +12,7 @@
     </ContentPage.BindingContext>
 
 
-    <Grid ColumnDefinitions="*" RowDefinitions="auto,auto,auto,*,*,*" RowSpacing="0">
+    <Grid ColumnDefinitions="*" RowDefinitions="auto,auto,auto,*,*,*" RowSpacing="0" BackgroundColor="Black">
         <Label Text="Select Population" TextColor="White" HorizontalTextAlignment="Center" FontSize="18" Padding="10"/>
         <StackLayout Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="5">
@@ -31,8 +31,8 @@
         </StackLayout>
         </StackLayout>
         <StackLayout Grid.Row="3" VerticalOptions="Start" Padding="10">
-            <Label Text="Income Tax:" HorizontalTextAlignment="Center" FontSize="18"/>
-            <Label x:Name="DisplayIncomeTax" Text="" HorizontalTextAlignment="Center" FontSize="18"/>
+            <Label Text="Income Tax:" HorizontalTextAlignment="Center" FontSize="18" TextColor="White"/>
+            <Label x:Name="DisplayIncomeTax" Text="" HorizontalTextAlignment="Center" FontSize="18" TextColor="White"/>
         </StackLayout>
 
     </Grid>

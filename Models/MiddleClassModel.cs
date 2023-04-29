@@ -10,8 +10,10 @@ namespace Hegemony.Models
 {
     public class MiddleClassModel
     {
+        
         public class MiddleClassCompany
         {
+            public string SelectedRadioButton { get; set; }
             public string prodImage { get; set; }
             public string companyName { get; set; }
             public string radioButtonGroupName { get; set; }

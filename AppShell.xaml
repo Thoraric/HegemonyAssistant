@@ -6,29 +6,44 @@
     xmlns:views="clr-namespace:Hegemony.Views"
     Shell.FlyoutBehavior="Disabled">
 
+    <Shell.Resources>
+        <Style x:Key="BaseStyle"
+               TargetType="Element">
+        <Setter Property="Shell.BackgroundColor"
+                Value="Black"/>
+        <Setter Property="Shell.TabBarBackgroundColor"
+                Value="Black"/>
+        </Style>
+    </Shell.Resources>
+
     <TabBar>
-        
+
         <ShellContent
+            Style="{StaticResource BaseStyle}"
             Title="Policies"
             ContentTemplate="{DataTemplate views:MainPage}"
             Icon="{OnPlatform 'taxmultiplier.svg', iOS='icon_notes_ios.png', MacCatalyst='icon_notes_ios.png'}" />
-        
+
         <ShellContent
+            Style="{StaticResource BaseStyle}"
             Title="State"
             ContentTemplate="{DataTemplate views:StateClassPage}"
             Icon="{OnPlatform 'state.svg', iOS='icon_notes_ios.png', MacCatalyst='icon_notes_ios.png'}" />
         
         <ShellContent
+            Style="{StaticResource BaseStyle}"
             Title="Capitalist"
             ContentTemplate="{DataTemplate views:CapitalistPage}"
             Icon="{OnPlatform 'capitalist.svg', iOS='icon_about_ios.png', MacCatalyst='icon_about_ios.png'}" />
 
         <ShellContent
+            Style="{StaticResource BaseStyle}"
             Title="Middle"
             ContentTemplate="{DataTemplate views:MiddleClassPage}"
             Icon="{OnPlatform 'middleclass.svg', iOS='icon_about_ios.png', MacCatalyst='icon_about_ios.png'}" />
 
         <ShellContent
+            Style="{StaticResource BaseStyle}"
             Title="Working"
             ContentTemplate="{DataTemplate views:WorkingClassPage}"
             Icon="{OnPlatform 'WorkingClass.svg', iOS='workingclass.png', MacCatalyst='workingclass.png'}" />

@@ -12,7 +12,7 @@
 
 
     <ScrollView>
-        <Grid ColumnDefinitions="*" RowDefinitions="auto,auto,auto,auto,auto,auto,auto" Margin="10">
+        <Grid ColumnDefinitions="*" RowDefinitions="auto,auto,auto,auto,auto,auto,auto" Margin="10" BackgroundColor="Black">
             <StackLayout>
                 <Label Text="Select Operational Companies" TextColor="White" HorizontalTextAlignment="Center" FontSize="20"/>
             </StackLayout>
@@ -37,9 +37,9 @@
                 </StackLayout>
             </StackLayout>
             <StackLayout Grid.Row="2">
-                <Label Text="Employment Tax:" HorizontalTextAlignment="Center" FontSize="20"/>
-                <Label x:Name="DisplayEmploymentTax" Text="0" HorizontalTextAlignment="Center" FontSize="20"/>
-                <Label Text="Type Revenue" HorizontalTextAlignment="Center" FontSize="20" Padding="5"/>
+                <Label Text="Employment Tax:" HorizontalTextAlignment="Center" FontSize="20" TextColor="White"/>
+                <Label x:Name="DisplayEmploymentTax" Text="0" HorizontalTextAlignment="Center" FontSize="20" TextColor="White"/>
+                <Label Text="Type Revenue" HorizontalTextAlignment="Center" FontSize="20" Padding="5" TextColor="White"/>
                 <Label x:Name="result" FontSize="30" Text="0" TextColor="Black" HorizontalTextAlignment="Center" WidthRequest="150" BackgroundColor="White"/>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="5" Padding="5">
                     <Button Text="1" Clicked="OnNumberSelection" TextColor="White" BackgroundColor="{Binding MyBackgroundColor}" HeightRequest="50" WidthRequest="50"/>
@@ -64,6 +64,7 @@
                 <StackLayout>
                     <Label Text="Revenue Tax:" TextColor="White" FontSize="20" VerticalOptions="Center" HorizontalTextAlignment="Center" Padding="5"></Label>
                     <Label x:Name="displayRevenue" Text="0" TextColor="White" FontSize="20" VerticalOptions="Center" HorizontalTextAlignment="Center"></Label>
+                    <Label Text="Select Companies" HorizontalTextAlignment="Center" FontSize="20" Padding="10" TextColor="White"></Label>
                 </StackLayout>
             </StackLayout>
             <StackLayout Grid.Row="4" Margin="0,0,0,0">
@@ -103,7 +104,7 @@
             </StackLayout>
             <StackLayout Grid.Row="5">
                 <StackLayout>
-                    <Label Text="Production" HorizontalOptions="Center" FontSize="20" Padding="10"/>
+                    <Label Text="Production" HorizontalOptions="Center" FontSize="20" Padding="10" TextColor="White"/>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center">
                     <StackLayout>
@@ -130,8 +131,8 @@
             </StackLayout>
             <StackLayout Grid.Row="6">
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="Working Class Wage" FontSize="20" Padding="10" LineBreakMode="WordWrap" WidthRequest="180" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                    <Label Text="Middle Class Wage" FontSize="20" Padding="10" LineBreakMode="WordWrap" WidthRequest="180" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    <Label Text="Working Class Wage" FontSize="20" Padding="10" TextColor="White" LineBreakMode="WordWrap" WidthRequest="180" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    <Label Text="Middle Class Wage" FontSize="20" Padding="10" TextColor="White" LineBreakMode="WordWrap" WidthRequest="180" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" Spacing="10">
                     <StackLayout HorizontalOptions="Center" WidthRequest="180">

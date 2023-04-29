@@ -1,4 +1,5 @@
 using Hegemony.Models;
+using Microsoft.Maui.Controls;
 using System.Collections.ObjectModel;
 namespace Hegemony.Views;
 
@@ -45,18 +46,23 @@ public partial class MiddleClassPage : ContentPage
     public void HasExtraWorker(object sender, EventArgs e)
     {
         var imgButton = (ImageButton)sender;
+
         var selectedCompany = (MiddleClassModel.MiddleClassCompany)imgButton.BindingContext;
 
-        // Change the image source based on the binding context
-        if (selectedCompany.hasWorker)
+        // Change the image source based on the binding context8
+        if (!selectedCompany.hasWorker)
         {
-            imgButton.Source = "workingclassworker.svg"; //new image
+            imgButton.Source = "yesworkingclassworker.svg"; //new image
             selectedCompany.hasWorker = !selectedCompany.hasWorker;
         }
         else
         {
+            
             imgButton.Source = "noworkingclassworker.svg"; //previous
             selectedCompany.hasWorker = !selectedCompany.hasWorker;
+
+
+
         }
         CountProduction();
     }
@@ -83,7 +89,7 @@ public partial class MiddleClassPage : ContentPage
             }
             else
             {
-                Wages += companies.selectedWage;
+                //Wages += companies.selectedWage;
                 Foods += companies.prodFood;
                 Educations += companies.prodnEdu;
                 Influences += companies.prodInf;
@@ -110,14 +116,18 @@ public partial class MiddleClassPage : ContentPage
 
                 case "L3":
                     selectedCompany.selectedWage = selectedCompany.wages[2];
+                    selectedCompany.SelectedRadioButton = radioButton.Content.ToString();
                     Console.WriteLine(selectedCompany.selectedWage);
+
                     break;
                 case "L2":
                     selectedCompany.selectedWage = selectedCompany.wages[1];
+                    selectedCompany.SelectedRadioButton = radioButton.Content.ToString();
                     Console.WriteLine(selectedCompany.selectedWage);
                     break;
                 case "L1":
                     selectedCompany.selectedWage = selectedCompany.wages[0];
+                    selectedCompany.SelectedRadioButton = radioButton.Content.ToString();
                     Console.WriteLine(selectedCompany.selectedWage);
                     break;
             }

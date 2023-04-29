@@ -10,7 +10,7 @@
     </ContentPage.BindingContext>
 
     <ScrollView>
-        <Grid ColumnDefinitions="*" RowDefinitions="auto,auto,auto,auto,auto,auto,auto" Margin="10">
+        <Grid ColumnDefinitions="*" RowDefinitions="auto,auto,auto,auto,auto,auto,auto" Margin="10" BackgroundColor="Black">
             <StackLayout>
                 <Label Text="Select Operational Companies" TextColor="White" HorizontalTextAlignment="Center" FontSize="20" Padding="5"/>
             </StackLayout>
@@ -29,14 +29,16 @@
                 </StackLayout>
             </StackLayout>
             <StackLayout Grid.Row="2">
-                <Label Text="Employment Tax:" HorizontalTextAlignment="Center" FontSize="20">
+                <Label Text="Employment Tax:" HorizontalTextAlignment="Center" FontSize="20" TextColor="White">
                 </Label>
-                <Label x:Name="DisplayEmploymentTax" Text="0" HorizontalTextAlignment="Center" FontSize="20">
+                <Label x:Name="DisplayEmploymentTax" Text="0" HorizontalTextAlignment="Center" FontSize="20" TextColor="White">
                 </Label>
                 <Label Text="Type in the number of companies, where you have workers in other players' companies"
                    HorizontalTextAlignment="Center"
                    FontSize="20"
+                   TextColor="White"
                    Padding="5">
+                    
                 </Label>
                 <Label
                 x:Name="result"
@@ -73,7 +75,7 @@
                     <VerticalStackLayout>
                         <Label Text="Income Tax:" TextColor="White" FontSize="20" VerticalOptions="Center" HorizontalTextAlignment="Center"></Label>
                         <Label x:Name="DisplayIncomeTax" Text="0" TextColor="White" FontSize="20" VerticalOptions="Center" HorizontalTextAlignment="Center"></Label>
-                        <Label Text="Select Companies" HorizontalTextAlignment="Center" FontSize="20"></Label>
+                        <Label Text="Select Companies" HorizontalTextAlignment="Center" FontSize="20" Padding="10" TextColor="White"></Label>
                     </VerticalStackLayout>
                 </StackLayout>
             </StackLayout>
@@ -95,13 +97,13 @@
                                     </StackLayout>
 
                                     <StackLayout Grid.Column="1" HorizontalOptions="EndAndExpand" >
-                                        <ImageButton Source="workingclassworker.svg" Clicked="HasExtraWorker" HeightRequest="40" MinimumHeightRequest="40" WidthRequest="40" MinimumWidthRequest="40" BindingContext="{Binding .}" />
+                                        <ImageButton Source="noworkingclassworker.svg" Clicked="HasExtraWorker" HeightRequest="40" MinimumHeightRequest="40" WidthRequest="40" MinimumWidthRequest="40" BindingContext="{Binding .}" />
                                     </StackLayout>
 
                                     <StackLayout Grid.Column="2" Orientation="Horizontal" HorizontalOptions="EndAndExpand" VerticalOptions="End">
-                                        <RadioButton Content="L3" GroupName="{Binding radioButtonGroupName}"  CheckedChanged="OnRadioButtonCheckedChanged" />
-                                        <RadioButton Content="L2" GroupName="{Binding radioButtonGroupName}"  CheckedChanged="OnRadioButtonCheckedChanged" />
-                                        <RadioButton Content="L1" GroupName="{Binding radioButtonGroupName}"  CheckedChanged="OnRadioButtonCheckedChanged" />
+                                        <RadioButton Content="L3"  GroupName="{Binding radioButtonGroupName}"  CheckedChanged="OnRadioButtonCheckedChanged" />
+                                        <RadioButton Content="L2"  GroupName="{Binding radioButtonGroupName}"  CheckedChanged="OnRadioButtonCheckedChanged" />
+                                        <RadioButton Content="L1"  GroupName="{Binding radioButtonGroupName}"  CheckedChanged="OnRadioButtonCheckedChanged" />
                                     </StackLayout>
                                     
                                 </Grid>
@@ -115,7 +117,7 @@
             </StackLayout>
             <StackLayout Grid.Row="5">
                 <StackLayout>
-                    <Label Text="Production" HorizontalOptions="Center" FontSize="20" Padding="10"/>
+                    <Label Text="Production" HorizontalOptions="Center" FontSize="20" Padding="10" TextColor="White"/>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center">
                     <StackLayout>
@@ -142,7 +144,7 @@
             </StackLayout>
             <StackLayout Grid.Row="6">
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                    <Label Text="Working Class Wage" FontSize="20" Padding="10" LineBreakMode="WordWrap" WidthRequest="180" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    <Label Text="Working Class Wage" FontSize="20" Padding="10" LineBreakMode="WordWrap" TextColor="White" WidthRequest="180" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center">
                     <StackLayout HorizontalOptions="Center" WidthRequest="180">

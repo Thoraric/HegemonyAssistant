@@ -8,9 +8,10 @@
     <ContentPage.BindingContext>
         <models:StateCompany/>
     </ContentPage.BindingContext>
+    
 
     <ScrollView>
-        <Grid ColumnDefinitions="*" RowDefinitions="auto,auto,auto,auto" Margin="10">
+        <Grid ColumnDefinitions="*" RowDefinitions="auto,auto,auto,auto" Margin="10" BackgroundColor="Black">
             <StackLayout Grid.Row="1" VerticalOptions="FillAndExpand" Margin="0,0,0,0">
                 <CollectionView x:Name="collectionView" ItemsSource="{Binding Companies}">
                     <CollectionView.ItemTemplate>
@@ -49,7 +50,7 @@
 
             <StackLayout Grid.Row="2">
                 <StackLayout>
-                    <Label Text="Production" HorizontalOptions="Center" FontSize="20" Padding="10"/>
+                    <Label Text="Production" HorizontalOptions="Center" FontSize="20" Padding="10" TextColor="White"/>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center">
 
@@ -77,8 +78,8 @@
             </StackLayout>
             <StackLayout Grid.Row="3">
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="Working Class Wage" FontSize="20" Padding="10" LineBreakMode="WordWrap" WidthRequest="180" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                    <Label Text="Middle Class Wage" FontSize="20" Padding="10" LineBreakMode="WordWrap" WidthRequest="180" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    <Label Text="Working Class Wage" FontSize="20" TextColor="White" Padding="10" LineBreakMode="WordWrap" WidthRequest="180" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    <Label Text="Middle Class Wage" FontSize="20" TextColor="White" Padding="10" LineBreakMode="WordWrap" WidthRequest="180" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" Spacing="10">
                     <StackLayout HorizontalOptions="Center" WidthRequest="180">

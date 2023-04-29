@@ -2,9 +2,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Hegemony.Views.MainPage"
-             xmlns:models="clr-namespace:Hegemony.Models">
+             xmlns:models="clr-namespace:Hegemony.Models"
+             Title="Policies">
 
-    <Grid RowDefinitions="auto,auto,auto,auto,auto,auto" Margin="10">
+    <Grid RowDefinitions="auto,auto,auto,auto,auto,auto" Margin="10" BackgroundColor="Black">
         <FlexLayout Grid.Row="0" Direction="Row" HeightRequest="76" MaximumHeightRequest="76" HorizontalOptions="Center">
             <ImageButton x:Name="P1A" Source="policy1a.svg"/>
             <ImageButton x:Name="P1B" Source="policy1b.svg"/>
